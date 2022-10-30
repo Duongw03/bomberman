@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="416.0" prefWidth="992.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19
+" xmlns:fx="http://javafx.com/fxml/1
+" fx:controller="uet.oop.bomberman.Menu.MenuController">
+    <children>
+        <Label alignment="CENTER" layoutX="393.0" layoutY="39.0" onMouseClicked="#GoToLv1Map" prefHeight="78.0" prefWidth="206.0" text="Level 1" textFill="WHITE">
+            <font>
+                <Font name="Freestyle Script" size="96.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="364.0" onMouseClicked="#ReturnMenu" text="Cancel" textFill="WHITE">
+            <font>
+                <Font name="Freestyle Script" size="26.0" />
+            </font>
+        </Label>
+        <Label alignment="CENTER" layoutX="393.0" layoutY="199.0" prefHeight="134.0" prefWidth="206.0" text="Level 2" textFill="WHITE">
+            <font>
+                <Font name="Freestyle Script" size="96.0" />
+            </font>
+        </Label>
+        <RadioButton layoutX="917.0" layoutY="374.0" mnemonicParsing="false" onAction="#OnOffMusic" />
+    </children>
+</AnchorPane>

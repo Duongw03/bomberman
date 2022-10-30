@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="416.0" prefWidth="992.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19
+" xmlns:fx="http://javafx.com/fxml/1
+" fx:controller="uet.oop.bomberman.Menu.MenuController">
+   <children>
+      <ImageView fitHeight="240.0" fitWidth="249.0">
+         <image>
+            <Image url="@../SceneMenu/logo_bomberman.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="213.0" fitWidth="358.0" layoutX="317.0">
+         <image>
+            <Image url="@../SceneMenu/bomberman_title_screen.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="430.0" layoutY="226.0" onMouseClicked="#NewGame" prefHeight="56.0" prefWidth="132.0" text="New Game" textFill="WHITE">
+         <font>
+            <Font name="Freestyle Script" size="45.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="427.0" layoutY="269.0" onMouseClicked="#Control" prefHeight="94.0" prefWidth="138.0" text="Control" textFill="WHITE">
+         <font>
+            <Font name="Freestyle Script" size="45.0" />
+         </font>
+      </Label>
+      <RadioButton layoutX="917.0" layoutY="374.0" mnemonicParsing="false" onAction="#OnOffMusic" textFill="WHITE" />
+   </children>
+</AnchorPane>
