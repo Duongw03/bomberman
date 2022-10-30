@@ -13,7 +13,7 @@ public class SpeedUp extends PowerUp {
 
     public  void usePowerUp() {
             if (Bomber.bomberman.isCollision(this)) {
-                BombermanGame.powerUps.remove(this);
+                //BombermanGame.powerUps.remove(this);
                 isSpeedUp = true;
         }
     }
