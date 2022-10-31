@@ -82,6 +82,8 @@ public class Bomb extends Entity {
                 Bomber.bomberman.setX(32);
                 Bomber.bomberman.setY(32);
                 Bomber.bomberman.setImg(Sprite.player_right.getFxImage());
+                Bomber.bomberman.setSpeed(8);
+                SpeedUp.isSpeedUp = false;
             }
             Bomber.bomberman.setAlive(true);
             bomb.setX(-100);
