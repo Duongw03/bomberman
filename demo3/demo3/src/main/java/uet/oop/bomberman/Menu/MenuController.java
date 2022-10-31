@@ -18,9 +18,11 @@ public class MenuController implements Initializable {
     @FXML
     public AnchorPane pane;
     private static Stage stageMenu = new Stage();
+    private static Stage stageLV1 = new Stage();
     public static Scene sceneMenu;
     public static Scene sceneControl;
     public static Scene sceneLV1;
+    public static Scene sceneWin;
     private Stage stage;
     private static boolean OnMusic = false;
 
@@ -72,6 +74,14 @@ public class MenuController implements Initializable {
         stageMenu.setScene(sceneMenu);
         stageMenu.show();
     }
+
+    public static void RunSceneWin() throws IOException {
+        Parent root = FXMLLoader.load(MenuController.class.getResource("/fxml/Win.fxml"));
+        sceneWin = new Scene(root);
+        stageLV1.setScene(sceneWin);
+        stageLV1.show();
+    }
+
     @FXML
     public void OnOffMusic() {
         if(OnMusic == false) {
