@@ -33,9 +33,9 @@ public class BombermanGame extends Application {
             "# # # # # # # # # #*# #*# # # #" +
             "#*  *      *  *      *        #" +
             "# # # # #*# # # #*#*# # # # # #" +
-            "#*    **  *   1   *           #" +
+            "#*    **  *       *           #" +
             "# #*# # # # # # #*# # # # # # #" +
-            "#        1  *  g*  *          #" +
+            "#           *  g*  *          #" +
             "###############################";
 
     public static final int WIDTH = 31;
@@ -102,7 +102,11 @@ public class BombermanGame extends Application {
                 render();
                 update();
                 if (winGame) {
-                    System.out.print("win");
+                    try {
+                        MenuController.RunSceneWin();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         };
@@ -187,7 +191,6 @@ public class BombermanGame extends Application {
         enemies.forEach(Enemy::update);
         entities.forEach(Entity::update);
         powerUps.forEach(PowerUp::update);
-        System.out.println(Bomber.bomberman.getSpeed());
         if(enemies.size() == 0) {
             Portal.portal.setActivate(true);
         }

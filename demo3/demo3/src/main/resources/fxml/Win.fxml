@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="412.0" prefWidth="992.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/19
+" xmlns:fx="http://javafx.com/fxml/1
+" fx:controller="uet.oop.bomberman.Menu.MenuController">
+    <children>
+        <Label alignment="CENTER" layoutX="226.0" layoutY="104.0" prefHeight="185.0" prefWidth="540.0" text="You Win" textFill="WHITE">
+            <font>
+                <Font name="Freestyle Script" size="81.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
