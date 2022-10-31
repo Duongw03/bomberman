@@ -83,9 +83,11 @@ public class Bomber extends Entity {
         if (!collisionEnemy()) {
             time++;
             bombermanDie();
+            speed = 4;
+            SpeedUp.isSpeedUp = false;
         }
         if(SpeedUp.isSpeedUp) {
-            speed = 6;
+            speed = 4;
         }
     }
 }

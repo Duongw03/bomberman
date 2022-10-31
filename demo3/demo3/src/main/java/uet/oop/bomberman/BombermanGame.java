@@ -35,7 +35,7 @@ public class BombermanGame extends Application {
             "# # # # #*# # # #*#*# # # # # #" +
             "#*    **  *   1   *           #" +
             "# #*# # # # # # #*# # # # # # #" +
-            "#        1  *   *  *          #" +
+            "#        1  *  g*  *          #" +
             "###############################";
 
     public static final int WIDTH = 31;
@@ -58,7 +58,6 @@ public class BombermanGame extends Application {
     public static final List<Entity> stillObjects = new ArrayList<>();
     public static final List<Enemy> enemies = new ArrayList<>();
     public static final List<PowerUp> powerUps = new ArrayList<>();
-    public SpeedUp speedUp = new SpeedUp(2,5,Sprite.powerup_speed.getFxImage());
     public static Stage stageLV1;
     public static Stage stageMenu;
     public static boolean winGame = false;
@@ -175,6 +174,10 @@ public class BombermanGame extends Application {
                     PowerUp speed_item = new SpeedUp(k, i, Sprite.powerup_speed.getFxImage());
                     powerUps.add(speed_item);
                 }
+                if (map_real[i][k] == 'g') {
+                    PowerUp wall_pass_item = new WallPass(k, i, Sprite.powerup_wallpass.getFxImage());
+                    powerUps.add(wall_pass_item);
+                }
             }
         }
 
@@ -183,8 +186,7 @@ public class BombermanGame extends Application {
     public void update() {
         enemies.forEach(Enemy::update);
         entities.forEach(Entity::update);
-//        powerUps.forEach(PowerUp::update);
-        speedUp.update();
+        powerUps.forEach(PowerUp::update);
         System.out.println(Bomber.bomberman.getSpeed());
         if(enemies.size() == 0) {
             Portal.portal.setActivate(true);
@@ -196,7 +198,7 @@ public class BombermanGame extends Application {
         stillObjects.forEach(g -> g.render(gc));
         entities.forEach(g -> g.render(gc));
         enemies.forEach(g -> g.render(gc));
-//        powerUps.forEach((g -> g.render(gc)));
-        speedUp.render(gc);
+        powerUps.forEach((g -> g.render(gc)));
+
     }
 }
