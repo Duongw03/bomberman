@@ -25,17 +25,17 @@ import java.util.List;
 
 public class BombermanGame extends Application {
     public static String map = "###############################" +
-            "#p     ** *    *   *  * * *   #" +
+            "#p     ** * 1  *   *  * * *   #" +
             "# # # #*# # #*#*# # # #*#*#*# #" +
-            "#  x*     ***  *      *   * * #" +
+            "#  x*     ***1 *2     *   * * #" +
             "# # # # # #*# # #*#*# # # # #*#" +
-            "#f         x **  *  *         #" +
+            "#f         x ** 1*  *         #" +
             "# # # # # # # # # #*# #*# # # #" +
-            "#*  *      *  *      *        #" +
+            "#*  *      *  * 1    *        #" +
             "# # # # #*# # # #*#*# # # # # #" +
             "#*    **  *       *           #" +
             "# #*# # # # # # #*# # # # # # #" +
-            "#           *  g*  *          #" +
+            "#         3 *  g*  *          #" +
             "###############################";
 
     public static final int WIDTH = 31;
@@ -173,6 +173,10 @@ public class BombermanGame extends Application {
                 if (map_real[i][k] == '2') {
                     Enemy oneal = new Oneal(k, i, Sprite.oneal_left1.getFxImage());
                     enemies.add(oneal);
+                }
+                if (map_real[i][k] == '3') {
+                    Enemy doll = new Doll(k, i, Sprite.doll_left1.getFxImage());
+                    enemies.add(doll);
                 }
                 if (map_real[i][k] == 'f') {
                     PowerUp speed_item = new SpeedUp(k, i, Sprite.powerup_speed.getFxImage());
